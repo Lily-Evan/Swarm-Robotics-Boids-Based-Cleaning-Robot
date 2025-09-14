@@ -1,0 +1,52 @@
+---
+
+## 📑 Report Outline (2–4 pages)
+
+**Title:** *Swarm Robotics: Boids-Based Cleaning Robots Simulation*
+
+---
+
+### 1. Project Overview  
+- Motivation: Inspired by robotic vacuums and swarm robotics.  
+- Goal: Demonstrate how multiple simple agents, following local rules, can collectively achieve global coverage.  
+- Approach: Combine **Boids model** (separation, alignment, cohesion) with dust cleaning and obstacle avoidance.
+
+---
+
+### 2. Technical Approach  
+- **Environment:** 60x60 grid with randomly placed dust (dirty cells) and obstacles.  
+- **Agents:** Each robot is modeled as a point with position and velocity.  
+- **Swarm Rules:**  
+  - Separation: Repulsion from nearby agents (avoid collisions).  
+  - Alignment: Adjust heading to match neighbors.  
+  - Cohesion: Steer toward group center.  
+- **Obstacle Avoidance:** Repulsion vectors from nearby obstacles.  
+- **Dust Cleaning:** Cells become “cleaned” once visited by a robot.  
+- **Coverage Metric:** Percentage of cleaned cells over total free cells.
+
+---
+
+### 3. Implementation  
+- Programming language: **Python**  
+- Libraries: `numpy`, `matplotlib`  
+- **Animation:** `matplotlib.animation.FuncAnimation`  
+- **Interactivity:** Mouse clicks allow modifying environment during simulation.  
+- **Parameters:** Number of robots, neighbor radius, dust density, obstacle density, etc.  
+
+*(Include 1–2 screenshots of the simulation and coverage graph.)*
+
+---
+
+### 4. Results  
+- Robots collectively clean nearly **100% of accessible cells** within ~4000 steps.  
+- Coverage increases smoothly, showing emergent group behavior.  
+- Swarm behavior avoids clustering in one corner and achieves better coverage than random walk.  
+
+---
+
+### 5. References  
+- Reynolds, C. W. (1987). *Flocks, herds and schools: A distributed behavioral model*. SIGGRAPH.  
+- Brambilla, M., et al. (2013). *Swarm robotics: a review from the swarm engineering perspective*. Swarm Intelligence.  
+- [Matplotlib Animation Documentation](https://matplotlib.org/stable/api/animation_api.html)
+
+---
